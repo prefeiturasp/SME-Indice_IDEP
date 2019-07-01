@@ -37,8 +37,6 @@ services:
       - static:/opt/services/djangoapp/static
       - media:/opt/services/djangoapp/media
       - front:/usr/share/nginx/html
-      # - ./data/certbot/conf:/etc/letsencrypt
-      # - ./data/certbot/www:/var/www/certbot
     networks:
       - nginx_network
     depends_on:
@@ -47,16 +45,6 @@ services:
       - front
     ports:
       - "80:80"
-      # - "443:443"
-    # command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
-
-  # certbot:
-  #   image: certbot/certbot
-  #   restart: unless-stopped
-  #   volumes:
-  #     - ./data/certbot/conf:/etc/letsencrypt
-  #     - ./data/certbot/www:/var/www/certbot
-  #   entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
 
   front:
     build: SME-Indice_IDEP-Front/
