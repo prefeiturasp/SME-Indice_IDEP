@@ -1,6 +1,8 @@
 [submodule "SME-Indice_IDEP-Front"]
 	path = SME-Indice_IDEP-Front
 	url = https://github.com/prefeiturasp/SME-Indice_IDEP-Front.git
+	branch = develop
 [submodule "SME-Indice_IDEP-API"]
 	path = SME-Indice_IDEP-API
 	url = https://github.com/prefeiturasp/SME-Indice_IDEP-API.git
+	branch = dev
